@@ -35,4 +35,6 @@ public interface IApi {
     Call<ResponseBody> writeOff(@Body MedicineWriteOff item);
     @POST("Medicines/Invoice")
     Call<ResponseBody> medInvoice(@Body InvoiceDocument doc);
+    @POST("Medicines/{Id}/Transfer")
+    Call<ResponseBody> medTransfer(@Path("Id")int MedicineId,@Query("destinationWarehouseId")int WarehouseId);
 }
