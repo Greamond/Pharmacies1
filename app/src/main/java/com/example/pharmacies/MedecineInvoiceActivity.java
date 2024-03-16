@@ -114,7 +114,7 @@ public class MedecineInvoiceActivity extends AppCompatActivity {
         Date endDate = Date.from(Instant.now());
         if (pickedDate.after(endDate)){
             med.quantity = Integer.valueOf(quantityEt.getText().toString());
-            med.expirationDate = pickedDate;
+            med.expirationDate = (pickedDate);
             med.price = Integer.valueOf(priceEt.getText().toString());
 
             selectedMed.add(med);
@@ -132,7 +132,7 @@ public class MedecineInvoiceActivity extends AppCompatActivity {
         InvoiceDocument doc = new InvoiceDocument();
         SimpleDateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         try {
-            doc.documentDate = df.parse(dateDocumentEt.getText().toString());
+            doc.setDate(df.parse(dateDocumentEt.getText().toString()));
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }

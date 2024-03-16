@@ -13,4 +13,5 @@ public class Medicines {
     public int quantity;
     public int warehouseId;
     public Date expirationDate;
+
 }

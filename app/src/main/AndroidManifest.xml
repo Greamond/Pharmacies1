@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".IssueRequestDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MedecineInvoiceActivity"
             android:exported="false" />
         <activity

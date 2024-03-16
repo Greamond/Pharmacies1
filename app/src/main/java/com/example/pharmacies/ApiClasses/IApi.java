@@ -28,7 +28,7 @@ public interface IApi {
     @GET("Medicines")
     Call<List<Medicines>> getMedicines();
     @GET("IssueRequests/{Id}")
-    Call<List<IssueRequest>> getIssueRequest(@Path("Id")int id);
+    Call<List<Medicines>> getIssueRequest(@Path("Id")int id);
     @GET("IssueRequests")
     Call<List<IssueRequest>> getIssueRequest();
     @POST("Medicines/Writeoff")
